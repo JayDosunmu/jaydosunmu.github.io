@@ -1,70 +1,23 @@
-<!DOCTYPE html>
+---
+layout: default
+---
 
-<html>
+<div class="home">
 
-  <head>
+  <h1 class="page-heading">Posts</h1>
 
-    <meta charset="UTF-8">
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-    <title>Impasto Turtle</title>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-    <link rel="icon" type="image/png" href="img/ImpastoTurtle.ico">
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
-
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,900' rel='stylesheet' type='text/css'>
-
-  </head>
-
-  <body>
-
-    <header id="grad">
-
-      <a href="index.html"><h1 id="logo">Impasto<br>TURTLE</h1></a>
-
-	<nav>
-
-	  <ul>
-
-	    <li><a href="art">ART</a></li>
-
-	    <li><a href="apps">DEV</a></li>
-
-	    <li><a href="projects">PROJECTS</a></li>
-
-	    <li><a href="about">ABOUT</a></li>
-
-	    <li><a href="contact">CONTACT</a></li>
-
-	  </ul>
-	</nav>
-
-    </header>
-
-    <section>
-
-      <ul>
-
-        <li><a href="img/artwork/HouseOfWolves.png" target="_blank"><img src="img/artwork/HouseOfWolves.png"></a></li>
-        <li><a href="img/artwork/Sith.png" target="_blank"><img src="img/artwork/Sith.png"></a></li>
-        <li><a href="img/artwork/RoyalAerospace.png" target="_blank"><img src="img/artwork/RoyalAerospace.png"></a></li>
-        <li><a href="img/artwork/LargerThanLife.png" target="_blank"><img src="img/artwork/LargerThanLife.png"></a></li>
-        <li><a href="img/artwork/Knight.jpg" target="_blank"><img src="img/artwork/Knight.jpg"></a></li>
-
-      </ul>
-
-    </section>
-
-    <footer>
-
-      &copy; TASLIM DOSUNMU 2015
-
-    </footer>
-  </body>
-
-</html>
-
+</div>
