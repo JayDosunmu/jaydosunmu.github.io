@@ -9,7 +9,7 @@ Taslim Dosunmu
 <applet
 codebase="https://github.com/JayDosunmu/Blastroids/blob/master/" 
 archive="Blastroids.jar" 
-code="blastroids.game/Game.class"  
+code="Game.class"  
 width=480 height=800>
 </applet>
 </body>
